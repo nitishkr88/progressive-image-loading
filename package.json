@@ -5,7 +5,6 @@
   "main": "src/main.js",
   "author": "Nitish Kumar",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --content-base dist/",
     "pre-build": "node generate-thumbs.js",
