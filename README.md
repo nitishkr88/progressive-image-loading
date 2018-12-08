@@ -1,18 +1,22 @@
 # Progressive Image Loading Techniques
 
-## What this repo about?
+## What is this repo about?
 
-An example of the how to apply progressive image loading and a couple of strategies currently used on web apps for that.
+An example of the how to apply progressive image loading using couple of strategies.
 
 ### Setup
 
-First run `npm install` to install the dependencies and then, run `npm pre-build` to generate the image placeholders and
-finally `npm start` to run the webpack-dev-server.
+`npm install` to install the dependencies
+
+`npm run pre-build` to generate the image placeholders
+
+`npm run start` to run the webpack-dev-server
 
 ### Dependencies
 
-This project depends on a few NodeJS lib, namely [sharp](https://github.com/lovell/sharp) and [potrace](https://github.com/tooolbox/node-potrace).
-Also, it uses [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for lazy loading
+This project depends on a few NodeJS libs, namely [sharp](https://github.com/lovell/sharp) and [potrace](https://github.com/tooolbox/node-potrace).
+
+Also, it uses [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for lazy loading.
 
 ### License
 
