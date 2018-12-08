@@ -1,0 +1,19 @@
+@import "~bulma";
+@import "progressive_loading";
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+#app {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    margin: 32px;
+  }
+}
