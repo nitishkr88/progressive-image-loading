@@ -6,6 +6,7 @@ import './styles/index.scss'
 
 import Home from './app/components/Home'
 import Trace from './app/components/Trace'
+import Virtualized from './app/components/Virtualized';
 
 reactDom.render(
   <Router>
@@ -28,7 +29,7 @@ reactDom.render(
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/trace" component={Trace} />
-        <Route exact path="/virtualized" component={Trace} />
+        <Route exact path="/virtualized" component={Virtualized} />
       </Switch>
     </React.Fragment>
   </Router>,
