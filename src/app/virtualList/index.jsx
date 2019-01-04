@@ -3,13 +3,8 @@ import PropTypes from 'prop-types'
 
 import SizeAndPositionManager from './SizeAndPositionManager'
 
-const CONTAINER_HEIGHT = 1000
 const CONTAINER_STYLE = {
-  width: '100%',
-  height: `${CONTAINER_HEIGHT}px`,
-  overflowY: 'auto',
-  border: '1px solid #DDD',
-  margin: '50px auto'
+  overflowY: 'auto'
 }
 
 const STYLE_INNER = {
@@ -102,14 +97,13 @@ class VirtualizedList extends React.Component {
   }
 
   render() {
-    const { overscanCount, rowRenderer } = this.props
+    const { overscanCount, rowRenderer, height: containerHeight } = this.props
     const { height, offset = 0 } = this.state
     const { start, stop } = this._sizeAndPositionManager.getVisibleRange({
       containerSize: height,
       offset,
       overscanCount
     })
-    console.log('offset', offset, 'start', start, 'stop', stop)
 
     let children = []
     for (let index = start; index <= stop; index++) {
@@ -117,7 +111,10 @@ class VirtualizedList extends React.Component {
     }
 
     return (
-      <div ref={el => (this.container = el)} style={{ ...CONTAINER_STYLE }}>
+      <div
+        ref={el => (this.container = el)}
+        style={{ ...CONTAINER_STYLE, height: containerHeight }}
+      >
         <div
           ref={el => (this.inner = el)}
           style={{

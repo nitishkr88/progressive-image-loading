@@ -6,7 +6,7 @@ import './styles/index.scss'
 
 import Home from './app/components/Home'
 import Trace from './app/components/Trace'
-import Virtualized from './app/components/Virtualized';
+import Virtualized from './app/components/Virtualized'
 
 reactDom.render(
   <Router>

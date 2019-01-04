@@ -43,17 +43,7 @@ const images = [
   { src: original_9, thumb: thumb_9 }
 ]
 
-const rows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const rowHeights = [150, 120, 100, 80, 50, 35, 200, 500, 50, 300]
-
 export default class Virtualized extends Component {
-  rowRenderer = ({ index }) => {
-    return (
-      <div key={index} style={{ height: `${rowHeights[index]}px` }}>
-        {rows[index]}
-      </div>
-    )
-  }
   imageRenderer = ({ index }) => {
     const src = images[index].src
     const thumb = images[index].thumb
@@ -67,8 +57,7 @@ export default class Virtualized extends Component {
     return (
       <VirtualizedList
         height={1000}
-        rowCount={rows.length}
-        // rowHeight={index => rowHeights[index]}
+        rowCount={images.length}
         rowHeight={520}
         rowRenderer={this.imageRenderer}
       />
