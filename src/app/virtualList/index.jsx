@@ -85,17 +85,6 @@ class VirtualizedList extends React.Component {
     return offset
   }
 
-  scrollToIndex = (index, alignment) => {
-    const { height } = this.state
-    const offset = this._sizeAndPositionManager.getUpdatedOffsetForIndex({
-      align: alignment,
-      containerSize: height,
-      targetIndex: index
-    })
-
-    this.container.scrollTop = offset
-  }
-
   render() {
     const { overscanCount, rowRenderer, height: containerHeight } = this.props
     const { height, offset = 0 } = this.state

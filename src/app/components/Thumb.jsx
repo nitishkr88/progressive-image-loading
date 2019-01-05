@@ -41,7 +41,7 @@ const images = [
   { src: original_9, thumb: thumb_9 }
 ]
 
-const Home = () => (
+const Thumb = () => (
   <section className="section">
     <div className="container">
       {images.map(({ src, thumb }) => (
@@ -55,4 +55,4 @@ const Home = () => (
   </section>
 )
 
-export default Home
+export default Thumb
