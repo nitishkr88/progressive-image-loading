@@ -2,7 +2,7 @@
 
 ## What is this repo about?
 
-An example of the how to apply progressive image loading using couple of strategies.
+An example of the how to apply progressive image loading using a few strategies.
 
 ### Setup
 

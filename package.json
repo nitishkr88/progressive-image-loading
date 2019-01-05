@@ -6,7 +6,7 @@
   "author": "Nitish Kumar",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --content-base dist/",
+    "start": "NODE_ENV=development webpack-dev-server --content-base dist/ --historyApiFallback true",
     "pre-build": "node generate-thumbs.js",
     "build": "rm -rf ./dist && NODE_ENV=production webpack"
   },
@@ -38,6 +38,7 @@
     "intersection-observer": "^0.5.0",
     "prop-types": "^15.6.1",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1"
   }
 }
